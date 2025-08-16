@@ -17,6 +17,7 @@ body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sa
 .left-inner{max-width:560px}
 .eyebrow{letter-spacing:.22em;color:var(--muted);text-transform:uppercase;font-weight:600;margin:.5rem 0 1rem 0;font-size:.85rem}
 .brand{font-size:3.2rem;margin:.2rem 0 0 0;letter-spacing:.2px;color:#2c6aa3}
+.brand .dot{color:#2a6ea9;opacity:.9}
 .sub{margin:.6rem 0 1rem 0;color:#2a3f50;font-weight:600}
 .micro{color:var(--muted);line-height:1.6;max-width:46ch}
 .waves{position:absolute;left:0;bottom:0;width:100%;pointer-events:none}

@@ -1,10 +1,7 @@
-// Set domain dynamically
-const dom = window.location.hostname || 'yourdomain.tld';
-document.getElementById('domain').textContent = dom;
-document.getElementById('domainField').value = dom;
+// Year + UX helpers
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Client-side validation + graceful feedback
+// Client-side validation + friendly feedback
 const form = document.getElementById('offerForm');
 const dlg = document.getElementById('thanks');
 function setError(id, msg){ const el=document.getElementById(id); if(el) el.textContent=msg||''; }
