@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>signalify.com — Domain For Sale</title>
+  <meta name="description" content="The domain signalify.com may be available for sale or lease." />
+  <meta property="og:title" content="signalify.com — Domain For Sale">
+  <meta property="og:description" content="This domain may be available for sale or lease. Make an offer.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://learnquest.co.za/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="split">
+    <section class="left">
+      <div class="left-inner">
+        <p class="eyebrow">THE DOMAIN NAME</p>
+        <h1 class="brand">signalify<span class="dot">.com</span></h1>
+        <p class="sub">May be available for sale</p>
+        <p class="micro">This domain name (without content) may be available for sale or lease by its owner through this domain sales platform.</p>
+        <div class="waves" aria-hidden="true">
+          <!-- decorative waves -->
+          <svg viewBox="0 0 1440 320" preserveAspectRatio="none" class="w1"><path d="M0,256L48,261.3C96,267,192,277,288,272C384,267,480,245,576,208C672,171,768,117,864,112C960,107,1056,149,1152,160C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+          <svg viewBox="0 0 1440 320" preserveAspectRatio="none" class="w2"><path d="M0,256L48,250.7C96,245,192,235,288,218.7C384,203,480,181,576,176C672,171,768,181,864,186.7C960,192,1056,192,1152,192C1248,192,1344,192,1392,192L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+          <svg viewBox="0 0 1440 320" preserveAspectRatio="none" class="w3"><path d="M0,256L40,224C80,192,160,128,240,133.3C320,139,400,213,480,218.7C560,224,640,160,720,133.3C800,107,880,117,960,149.3C1040,181,1120,235,1200,245.3C1280,256,1360,224,1400,208L1440,192L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
+        </div>
+        <footer class="footer">
+          <span>&copy; <span id="year"></span></span>
+          <a href="#" id="privacyLink">Privacy Policy</a>
+        </footer>
+      </div>
+    </section>
+    <section class="right">
+      <form class="card" id="offerForm" novalidate>
+        <h2>Make an offer on <span class="brand-inline">signalify.com</span></h2>
+        <div class="field">
+          <label for="name">Full Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+          <p class="error" id="nameError"></p>
+        </div>
+        <div class="field">
+          <label for="email">Email Address</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+          <p class="error" id="emailError"></p>
+        </div>
+        <div class="field">
+          <label for="phone">Phone Number</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel">
+        </div>
+        <div class="field two">
+          <div>
+            <label for="currency">Purchasing for:</label>
+            <select id="currency" name="currency" aria-label="Currency">
+              <option value="EUR">EUR €</option>
+              <option value="USD">USD $</option>
+              <option value="GBP">GBP £</option>
+              <option value="ZAR">ZAR R</option>
+            </select>
+          </div>
+          <div>
+            <label for="amount">Offer Amount</label>
+            <input id="amount" name="amount" type="number" min="0" step="0.01" inputmode="decimal" placeholder="e.g., 1500" required>
+            <p class="error" id="amountError"></p>
+          </div>
+        </div>
+        <div class="field">
+          <label for="message">Message (optional)</label>
+          <textarea id="message" name="message" rows="4" placeholder="Tell us how you intend to use the domain."></textarea>
+        </div>
+        <button class="btn" type="submit">Submit</button>
+        <p class="tiny">By submitting, you agree that we may contact you about this domain.</p>
+      </form>
+    </section>
+  </main>
+
+  <dialog id="thanks">
+    <h3>Offer sent ✅</h3>
+    <p>Thanks for your interest. We'll get back to you shortly.</p>
+    <form method="dialog"><button class="btn-outline">Close</button></form>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
