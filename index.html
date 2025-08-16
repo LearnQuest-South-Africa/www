@@ -31,8 +31,9 @@
       </div>
     </section>
     <section class="right">
-      <form class="card" id="offerForm" novalidate>
+      <form class="card" id="offerForm" method="POST" action="send.php" novalidate>
         <h2>Make an offer</h2>
+        <input type="hidden" id="domainField" name="domain" value="yourdomain.tld">
         <div class="field">
           <label for="name">Full Name</label>
           <input id="name" name="name" type="text" autocomplete="name" required>
@@ -67,6 +68,8 @@
           <label for="message">Message (optional)</label>
           <textarea id="message" name="message" rows="4" placeholder="Add additional context for your offer."></textarea>
         </div>
+        <!-- Honeypot -->
+        <input type="text" name="company" id="company" class="hp" autocomplete="off" tabindex="-1" aria-hidden="true">
         <button class="btn" type="submit">Send to billing@skunkworks.africa</button>
         <p class="tiny">We will only use your details to respond to your offer.</p>
       </form>
@@ -74,8 +77,8 @@
   </main>
 
   <dialog id="thanks">
-    <h3>Offer prepared</h3>
-    <p>Your email editor should open. If it doesn&apos;t, copy the generated message and email it to <strong>billing@skunkworks.africa</strong>.</p>
+    <h3>Offer sent</h3>
+    <p>Thanks! If you don’t see a confirmation, please email <strong>billing@skunkworks.africa</strong>.</p>
     <form method="dialog"><button class="btn-outline">Close</button></form>
   </dialog>
 
