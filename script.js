@@ -1,7 +1,9 @@
-// year
+// dynamic domain name
+const domEl = document.getElementById('domain');
+domEl.textContent = window.location.hostname || 'yourdomain.tld';
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// basic client-side validation + demo handler
+// validation + mailto submit
 const form = document.getElementById('offerForm');
 const dlg = document.getElementById('thanks');
 
@@ -18,21 +20,35 @@ form.addEventListener('submit', (e)=>{
   if(!amount || Number(amount)<=0){ setError('amountError','Enter a valid amount.'); ok=false; } else setError('amountError','');
   if(!ok) return;
 
-  // In production, POST to your backend or a form service endpoint.
-  // Example payload you can send:
   const payload = {
+    domain: domEl.textContent,
     name, email, phone: form.phone.value.trim(),
     currency: form.currency.value, amount: Number(amount),
     message: form.message.value.trim(), ts: new Date().toISOString()
   };
-  console.log('Offer payload:', payload);
+
+  // Build mailto with prefilled subject/body
+  const subject = `Offer for ${payload.domain}`;
+  const bodyLines = [
+    `Domain: ${payload.domain}`,
+    `Name: ${payload.name}`,
+    `Email: ${payload.email}`,
+    `Phone: ${payload.phone || '-'}`,
+    `Offer: ${payload.currency} ${payload.amount}`,
+    `Message: ${payload.message || '-'}`,
+    `Submitted: ${payload.ts}`
+  ];
+  const body = encodeURIComponent(bodyLines.join('\n'));
+  const mailto = `mailto:billing@skunkworks.africa?subject=${encodeURIComponent(subject)}&body=${body}`;
+
+  // attempt to open their email client
+  window.location.href = mailto;
 
   if(typeof dlg.showModal === 'function'){ dlg.showModal(); }
   form.reset();
 });
 
-// Optional: hook a privacy link to a simple modal/text (replace with real page)
 document.getElementById('privacyLink').addEventListener('click', (e)=>{
   e.preventDefault();
-  alert('Add your privacy policy link or modal here.');
+  alert('Add a hosted privacy policy URL here.');
 });

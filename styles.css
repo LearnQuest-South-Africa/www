@@ -2,73 +2,47 @@
   --bg:#0e5f85;
   --bg-dark:#1a5674;
   --ink:#0b2130;
-  --ink-light:#2a3f50;
-  --text:#0e2233;
   --card:#ffffff;
-  --muted:#5b738a;
+  --muted:#6a7f94;
   --brand:#2a6ea9;
   --brand-2:#67c1f5;
-  --accent:#0a74da;
-  --shadow:0 30px 60px rgba(2,20,37,.25);
   --radius:18px;
+  --shadow:0 30px 60px rgba(2,20,37,.25);
 }
 *{box-sizing:border-box}
 html,body{height:100%}
-body{
-  margin:0;
-  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-  color:var(--text);
-  background:linear-gradient(120deg,#f7fbff 0%,#f2faff 100%);
-}
-.split{
-  display:grid;
-  grid-template-columns:1.1fr 0.9fr;
-  min-height:100vh;
-}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#0e2233;background:linear-gradient(120deg,#f7fbff 0%,#f2faff 100%)}
+.split{display:grid;grid-template-columns:1.1fr 0.9fr;min-height:100vh}
 .left{position:relative;background:#fff;display:flex;align-items:center;justify-content:center;padding:6rem 3rem}
 .left-inner{max-width:560px}
-.eyebrow{letter-spacing:.22em;color:#6a7f94;text-transform:uppercase;font-weight:600;margin:.5rem 0 1rem 0;font-size:.85rem}
+.eyebrow{letter-spacing:.22em;color:var(--muted);text-transform:uppercase;font-weight:600;margin:.5rem 0 1rem 0;font-size:.85rem}
 .brand{font-size:3.2rem;margin:.2rem 0 0 0;letter-spacing:.2px;color:#2c6aa3}
-.brand .dot{color:#2a6ea9;opacity:.9}
 .sub{margin:.6rem 0 1rem 0;color:#2a3f50;font-weight:600}
-.micro{color:#6a7f94;line-height:1.6;max-width:46ch}
+.micro{color:var(--muted);line-height:1.6;max-width:46ch}
 .waves{position:absolute;left:0;bottom:0;width:100%;pointer-events:none}
 .waves svg{display:block;width:100%;height:130px}
 .waves .w1 path{fill:#67c1f5;opacity:.45}
 .waves .w2 path{fill:#2a6ea9;opacity:.30}
 .waves .w3 path{fill:#4bb3df;opacity:.22}
+.footer{display:flex;gap:1rem;align-items:center;color:var(--muted);margin-top:2rem}
+.footer a{color:#2a6ea9;text-decoration:none}
+.footer a:hover{text-decoration:underline}
 
 .right{background:linear-gradient(180deg,var(--bg) 0%, var(--bg-dark) 100%);display:flex;align-items:center;justify-content:center;padding:6rem 2rem}
-.card{
-  width:min(520px,92vw);
-  background:var(--card);
-  border-radius:var(--radius);
-  box-shadow:var(--shadow);
-  padding:2rem;
-}
+.card{width:min(520px,92vw);background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:2rem}
 .card h2{margin:.2rem 0 1rem 0;font-size:1.5rem;color:#1a2e40}
-.brand-inline{color:#2c6aa3}
 .field{margin:1rem 0}
 .field.two{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 label{display:block;font-weight:600;color:#234059;font-size:.92rem;margin-bottom:.35rem}
-input,select,textarea{
-  width:100%;border:1px solid #d5e1ec;border-radius:12px;padding:.85rem 1rem;font-size:1rem;
-  background:#fafcff;outline:none;transition:box-shadow .2s,border-color .2s;
-}
+input,select,textarea{width:100%;border:1px solid #d5e1ec;border-radius:12px;padding:.85rem 1rem;font-size:1rem;background:#fafcff;outline:none;transition:box-shadow .2s,border-color .2s}
 input:focus,select:focus,textarea:focus{border-color:#9bc2e2;box-shadow:0 0 0 4px rgba(103,193,245,.25)}
 .error{color:#b21e35;font-size:.85rem;margin:.4rem 0 0 0;height:1em}
-.btn,.btn-outline{
-  padding:.9rem 1.2rem;border:none;border-radius:999px;font-weight:700;font-size:1rem;cursor:pointer
-}
+.btn,.btn-outline{padding:.9rem 1.2rem;border:none;border-radius:999px;font-weight:700;font-size:1rem;cursor:pointer}
 .btn{background:linear-gradient(90deg,#2a6ea9,#4bb3df);color:#fff}
 .btn:hover{filter:brightness(1.05)}
 .btn:active{transform:translateY(1px)}
 .btn-outline{background:#fff;border:2px solid #2a6ea9;color:#2a6ea9}
-.tiny{font-size:.85rem;color:#6a7f94;margin-top:.6rem}
-
-.footer{display:flex;gap:1rem;align-items:center;color:#6a7f94;margin-top:2rem}
-.footer a{color:#2a6ea9;text-decoration:none}
-.footer a:hover{text-decoration:underline}
+.tiny{font-size:.85rem;color:var(--muted);margin-top:.6rem}
 
 dialog{border:none;border-radius:16px;box-shadow:var(--shadow);padding:1.4rem}
 dialog::backdrop{background:rgba(0,0,0,.25)}
